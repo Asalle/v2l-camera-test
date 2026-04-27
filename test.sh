@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Define your command here
-CMD="gst-launch-1.0 v4l2src device=/dev/video0 ! video/x-raw,format=UYVY,width=2592,height=1944,framerate=15/1 ! videoconvert ! video/x-raw,format=YUY2,width=2592,height=1944 ! waylandsink" 
+CMD="gst-launch-1.0 v4l2src device=/dev/video0 ! video/x-raw,format=UYVY,width=2592,height=1944,framerate=15/1 ! videoconvert ! video/x-raw,format=YUY2,width=2592,height=1944 ! waylandsink display=${WAYLAND_DISPLAY" 
 COUNTER_FILE=count.txt
 
 for i in {1..500}
